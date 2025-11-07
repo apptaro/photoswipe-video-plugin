@@ -1,0 +1,39 @@
+{
+  "name": "photoswipe-video-plugin",
+  "version": "0.1.0",
+  "description": "PhotoSwipe v5 plugin that adds video tag support.",
+  "type": "module",
+  "main": "photoswipe-video-plugin.esm.js",
+  "module": "photoswipe-video-plugin.esm.js",
+  "exports": {
+    ".": "./photoswipe-video-plugin.esm.js"
+  },
+  "files": [
+    "photoswipe-video-plugin.esm.js",
+    "README.md",
+    "sample.html"
+  ],
+  "scripts": {
+    "serve": "python3 -m http.server 8080",
+    "start": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "photoswipe",
+    "photoswipe-plugin",
+    "gallery",
+    "lightbox",
+    "plugin",
+    "es-module",
+    "video"
+  ],
+  "author": "apptaro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apptaro/photoswipe-video-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apptaro/photoswipe-video-plugin/issues"
+  },
+  "homepage": "https://github.com/apptaro/photoswipe-video-plugin#readme"
+}
