@@ -34,7 +34,7 @@ A lightweight **PhotoSwipe v5** plugin that adds video tag support.
 1. Open `sample.html` using any static server  
    (e.g. `python3 -m http.server`)
 2. Ensure internet access to load PhotoSwipe from UNPKG CDN.
-3. Click the arrows to see the animated looping transition.
+3. Click the video thumbnail to play it in the lightbox.
 
 ---
 
@@ -99,7 +99,7 @@ You can use any of these to define video slides:
 
 ## 🧠 Behavior Details
 
-- The plugin creates a poster `<img>` first, then swaps to `<video>` when activated.
+- PhotoSwipe uses the thumbnail/poster image first, then the plugin swaps the slide content to a <video> element when activated.
 - When leaving a video slide, playback pauses automatically.
 - Returning to the same slide **reuses** the same `<video>` element (no reload).
 - On destroy, video elements are fully released to prevent memory leaks, even on Safari.
