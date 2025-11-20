@@ -65,11 +65,25 @@ export default class PhotoSwipeVideoPlugin {
       if (!video) {
         video = document.createElement('video');
         video.toggleAttribute('muted', cfg.muted);
+        video.muted = !!cfg.muted;
         video.toggleAttribute('controls', cfg.controls);
+        video.controls = !!cfg.controls;
         video.toggleAttribute('loop', cfg.loop);
+        video.loop = !!cfg.loop;
+        if (cfg.controlslist) {
+          video.setAttribute('controlslist', cfg.controlslist);
+        } else {
+          video.removeAttribute('controlslist');
+        }
         video.setAttribute('controlslist', cfg.controlslist);
         video.toggleAttribute('disablepictureinpicture', cfg.disablepictureinpicture);
+        if ('disablePictureInPicture' in video) {
+          video.disablePictureInPicture = !!cfg.disablepictureinpicture;
+        }
         video.toggleAttribute('playsinline', cfg.playsinline);
+        if ('playsInline' in video) {
+          video.playsInline = !!cfg.playsinline;
+        }
         video.preload = 'metadata';
 
         let sources = content.data?.videoSources;
